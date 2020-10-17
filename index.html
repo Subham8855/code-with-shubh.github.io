@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider_nav</title>
+    <link rel="stylesheet"
+        href="C:\Users\hp\Downloads\fontawesome-free-5.14.0-web\fontawesome-free-5.14.0-web\css\all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .tohead {
+            height: 65px;
+            background-color: rgba(22, 22, 173, .5);
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-left: 50px;
+            text-transform: capitalize;
+        }
+
+        .menulines {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .mainpart {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgb(34, 34, 34);
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
+
+
+        a {
+            display: flex;
+            margin-left: 35px;
+            margin-bottom: 40px;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        .closebtn {
+            margin-left: 160px;
+            font-size: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tohead">
+        <div class="logo">
+            shubham maurya
+        </div>
+        <div class="menulines" onclick="opennav()" id="openbtn">
+            <span>&#9776;</span>
+        </div>
+    </div>
+    <div class="sidenav" id="mysidenav">
+        <a href="#" class="closebtn" onclick="closenav()">&times;</a>
+        <a href="#"><i class="fa fa-home"></i>home</a>
+        <a href="#"> <i class="fas fa-about"></i>gallery</a>
+        <a href="#"> <i class="fa fa-home"></i>servies</a>
+        <a href="#"> <i class="fa fa-home"></i>clients</a>
+    </div>
+    <section class="mainpart">
+        <h2>Ainmation sidenav exmple</h2>
+        <p id="click_me">click on the element below to open the side navigation menu</p>
+        <button onclick="red()" style="background: red;">click me</button>
+        <button onclick="yellow()" style="background: yellow;">click me</button>
+        <button onclick="blue()" style="background: blue;">click me</button>
+        <button onclick="brown()" style="background: brown;">click me</button>
+    </section>
+
+
+</body>
+<script>
+    function opennav() {
+        document.getElementById("mysidenav").style.width = "200px ";
+        console.log("this is open side nav bar")
+    }
+    function closenav() {
+        document.getElementById("mysidenav").style.width = "0";
+        console.log("this is close side nav bar")
+    }
+    function red() {
+        document.getElementById("click_me").style.background = "red";
+    }
+    function yellow() {
+        document.getElementById("click_me").style.background = "yellow";
+    }
+    function blue() {
+        document.getElementById("click_me").style.background = "blue";
+    }
+    function brown() {
+        document.getElementById("click_me").style.background = "brown";
+    }
+
+
+</script>
+
+</html>
